@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1.
+        Tag List
+    ul
+        each tag, i in taglist
+            li
+                if(tag.tagname==="anoop")
+                    #{tag.tagName}= tag._id

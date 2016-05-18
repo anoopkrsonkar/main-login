@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    h1.
+        Business List
+    ul    
+
+        each business, i in businesslist
+            
+               
+               
+               
+                 #{business.businessname}= business.businessName
+                 
+                 form#formAddReview(method="post",action="/addreview")
+                    textarea#inputReview(rows="5",type="text", placeholder="Share your experience here",name="review")
+                    
+                    br 
+                    input(id='pd',type='hidden',name='pd',value='#{business._id}')   
+                    
+
+               
+                    
+                    
+                    button#btnSubmit(type="submit") submit
+
+                    
